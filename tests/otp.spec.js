@@ -30,7 +30,7 @@ test.describe("Validação do OTP", () => {
     console.log(`OTP utilizado no teste positivo: ${otp}`);
 
     // 3. Abre a página
-    await page.goto("http://127.0.0.1:5500/");
+    await page.goto("https://horadoqa.github.io/OTP/");
 
     await page.waitForTimeout(1000);
 
@@ -75,7 +75,7 @@ test.describe("Validação do OTP", () => {
   test("Cenário negativo - deve rejeitar um OTP inválido", async ({ page }) => {
 
     // Abre a página
-    await page.goto("http://127.0.0.1:5500/");
+    await page.goto("https://horadoqa.github.io/OTP/");
 
     await page.waitForTimeout(1000);
 
