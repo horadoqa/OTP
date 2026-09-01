@@ -3,9 +3,9 @@ const { execFileSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-const projetoDir = path.resolve(__dirname, "..");
+const projetoDir = path.resolve(__dirname, "../..");
 const otpJsonPath = path.join(projetoDir, "otp.json");
-const gerarOtpPath = path.join(projetoDir, "gerar-otp.js");
+const gerarOtpPath = path.join(projetoDir, "script", "gerar-otp.js");
 
 test.describe("Validação do OTP", () => {
 
