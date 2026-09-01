@@ -2,7 +2,7 @@ name: Playwright
 
 on:
   workflow_run:
-    workflows: ["Deploy Pages"]
+    workflows: ["Deploy static content to Pages"]
     types:
       - completed
 
