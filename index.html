@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <title>Verificação de segurança</title>
+
+</head>
+
+<body>
+
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+    <main class="card" id="card">
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Sistema protegido
+        </div>
+
+        <div class="icon">⌁</div>
+
+        <h1>Verificação de segurança</h1>
+
+        <p class="subtitle">
+            Digite o código de 6 dígitos para confirmar sua identidade
+            e continuar com segurança.
+        </p>
+
+        <div class="otp">
+
+            <input maxlength="1" inputmode="numeric" autocomplete="one-time-code" autofocus>
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+            <input maxlength="1" inputmode="numeric">
+
+        </div>
+
+        <button onclick="validarOTP()">
+            Confirmar código
+        </button>
+
+        <div id="mensagem"></div>
+
+        <div class="security">
+            <span>◈</span>
+            Conexão criptografada · Verificação segura
+        </div>
+
+    </main>
+
+    <script src="./assets/verificar-otp.js"></script>
+
+
+</body>
+
+</html>
