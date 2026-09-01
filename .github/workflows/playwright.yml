@@ -16,13 +16,21 @@ jobs:
         working-directory: ./playwright/tests
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: playwright/tests/package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Playwright
+      - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
       - name: Run tests
-        run: npx playwright test --config=playwright/playwright.config.js
+        run: npx playwright test
