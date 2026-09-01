@@ -1,7 +1,7 @@
 const { defineConfig } = require("@playwright/test");
 
 module.exports = defineConfig({
-  testDir: "./tests",
+  testDir: ".",
 
   use: {
     baseURL: "http://127.0.0.1:8080"
