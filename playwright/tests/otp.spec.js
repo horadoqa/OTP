@@ -30,9 +30,8 @@ test.describe("Validação do OTP", () => {
     console.log(`OTP utilizado no teste positivo: ${otp}`);
 
     // 3. Abre a página
-    await page.goto("https://horadoqa.github.io/OTP/");
+    await page.goto("/");
 
-    await page.waitForTimeout(1000);
 
     // 4. Aguarda os campos do OTP
     const inputs = page.locator(".otp input");
@@ -43,8 +42,6 @@ test.describe("Validação do OTP", () => {
     for (let i = 0; i < otp.length; i++) {
       await inputs.nth(i).fill(otp[i]);
     }
-
-    await page.waitForTimeout(1000);
 
     // 6. Clica em confirmar
     await page.getByRole("button", {
@@ -75,9 +72,7 @@ test.describe("Validação do OTP", () => {
   test("Cenário negativo - deve rejeitar um OTP inválido", async ({ page }) => {
 
     // Abre a página
-    await page.goto("https://horadoqa.github.io/OTP/");
-
-    await page.waitForTimeout(1000);
+    await page.goto("/");
 
     const inputs = page.locator(".otp input");
 
@@ -93,7 +88,6 @@ test.describe("Validação do OTP", () => {
       await inputs.nth(i).fill(otpInvalido[i]);
     }
 
-    await page.waitForTimeout(1000);
 
     // Clica em confirmar
     await page.getByRole("button", {

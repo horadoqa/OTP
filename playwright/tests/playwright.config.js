@@ -1,4 +1,15 @@
-import { defineConfig } from '@playwright/test';
+const { defineConfig } = require("@playwright/test");
 
-export default defineConfig({});
+module.exports = defineConfig({
+  testDir: "./tests",
 
+  use: {
+    baseURL: "http://127.0.0.1:8080"
+  },
+
+  webServer: {
+    command: "npx http-server .. -p 8080 -c-1",
+    url: "http://127.0.0.1:8080",
+    reuseExistingServer: false
+  }
+});

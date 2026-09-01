@@ -1,4 +1,5 @@
 let OTP_CORRETO = "";
+let otpCarregado = false;
 
   const inputs = document.querySelectorAll(".otp input");
   const card = document.getElementById("card");
@@ -23,6 +24,7 @@ let OTP_CORRETO = "";
       const dados = await resposta.json();
 
       OTP_CORRETO = String(dados.otp);
+      otpCarregado = true;
 
       console.log("OTP carregado.");
 
